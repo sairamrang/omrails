@@ -2,7 +2,8 @@ source 'https://rubygems.org'
 
 <<<<<<< HEAD
 ruby "2.3.1" 
-
+=======
+ruby "2.3.1"
 >>>>>>> 3978e34114afd7734b3e1c397ae38c3e4f729a23
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
