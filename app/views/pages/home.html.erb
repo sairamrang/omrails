@@ -7,7 +7,11 @@
             <h1>Welcome to IdeaPicker.</h1>
         <% end %>
         <p>IdeaPicker is the easiest way to crowdsource ideas from your team and pick a winning idea. The whole thing is just a game.</p>
-        <%= link_to "Learn more »", "#", class: "btn btn-primary btn-lg" %> 
+        <% if user_signed_in? %>
+            <li class="nav-item"><%= link_to "Post an idea", signout_path, method: :delete, class: "btn btn-primary btn-lg" %></l>
+          <% else %>
+            <li class="nav-item"><%= link_to "Sign up", signup_path, class: "btn btn-primary btn-lg" %></l>
+          <% end %>
     </div>
 </div>
 <div class="container">
@@ -19,7 +23,7 @@
         </div>
         <div class="col-md-4">
             <h2>Vote for ideas</h2>
-            <p>They simply use their votes to up or down vote an idea.</p>
+            <p>They simply use their votes to up or down vote the ideas.</p>
             <p><%= link_to "View details", "#", class: "btn btn-secondary" %></p>
         </div>
         <div class="col-md-4">
